@@ -23,10 +23,10 @@ namespace tcp_moe_client
              * Check if the loader is already running.
              */
             bool result;
-            var mutex = new System.Threading.Mutex(true, "tcp-moe-client", out result);
+            var mutex = new System.Threading.Mutex(true, "Intersense Client", out result);
             if (!result)
             {
-                UI.MsgBox.Show("Only one instance of tcp-moe can be running at a time.", "Only one instance", MessageBoxIcon.Error);
+                UI.MsgBox.Show("Only one instance of the loader can be running at a time.", "Only one instance", MessageBoxIcon.Error);
                 return;
             }
 
